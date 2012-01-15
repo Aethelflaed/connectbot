@@ -101,6 +101,7 @@
   <string name="pref_bell_notification_summary">Envoyer une notification lorsqu\'un terminal génère une alerte</string>
   <string name="list_keymode_right">Utiliser les touches du côté droit du clavier</string>
   <string name="list_keymode_left">Utiliser les touches du côté gauche du clavier</string>
+  <string name="list_keymode_hardware">Utiliser les touches matérielles</string>
   <string name="list_keymode_none">Désactivé</string>
   <string name="list_pubkeyids_none">Ne pas utiliser les clefs de cryptage publiques</string>
   <string name="list_pubkeyids_any">Utiliser une clé pour l\'authentification</string>
