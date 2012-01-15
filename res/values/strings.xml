@@ -219,6 +219,8 @@
 	<string name="list_keymode_right">"Use right-side keys"</string>
 	<!-- Preference selection to indicate use of left side of keyboard for special shortcuts. -->
 	<string name="list_keymode_left">"Use left-side keys"</string>
+	<!-- Preference selection to indicate use of hardware keys for slash and tab. -->
+	<string name="list_keymode_hardware">"Use hardware keys"</string>
 	<!-- Preference selection to indicate never to use special shortcut keys. -->
 	<string name="list_keymode_none">"Disable"</string>
 

@@ -54,6 +54,7 @@ public class PreferenceConstants {
 
 	public static final String KEYMODE_RIGHT = "Use right-side keys";
 	public static final String KEYMODE_LEFT = "Use left-side keys";
+	public static final String KEYMODE_HARDWARE = "Use hardware keys";
 
 	public static final String CAMERA = "camera";
 

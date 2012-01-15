@@ -148,6 +148,11 @@ public class TerminalKeyListener implements OnKeyListener, OnSharedPreferenceCha
 						bridge.transport.write(0x09);
 						return true;
 					}
+				} else if (PreferenceConstants.KEYMODE_HARDWARE.equals(keymode)) {
+					if (keyCode == KeyEvent.KEYCODE_TAB) {
+						bridge.transport.write(0x09);
+						return true;
+					}
 				}
 
 				return false;
