@@ -56,6 +56,18 @@ public class PreferenceConstants {
 	public static final String KEYMODE_LEFT = "Use left-side keys";
 	public static final String KEYMODE_HARDWARE = "Use hardware keys";
 
+	public static final String SOUNDUP = "soundup";
+
+	public static final String SOUNDUP_FONT = "Increase font size";
+	public static final String SOUNDUP_CTRL = "Send ctrl key";
+	public static final String SOUNDUP_ESC = "Send esc key";
+
+	public static final String SOUNDDOWN  = "sounddown";
+
+	public static final String SOUNDDOWN_FONT = "Decrease font size";
+	public static final String SOUNDDOWN_CTRL = "Send ctrl key";
+	public static final String SOUNDDOWN_ESC = "Send esc key";
+
 	public static final String CAMERA = "camera";
 
 	public static final String CAMERA_CTRLA_SPACE = "Ctrl+A then Space";

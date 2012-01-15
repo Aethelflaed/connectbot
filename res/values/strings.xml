@@ -178,6 +178,16 @@
 	<!-- Summary for the keyboard shortcuts preference -->
 	<string name="pref_keymode_summary">"Select how to use Alt for '/' and Shift for Tab"</string>
 
+	<!-- Name for the sound up key preference -->
+	<string name="pref_soundup_title">"Sound up key"</string>
+	<!-- Summary for the sound up key preference -->
+	<string name="pref_soundup_summary">"Select how to use sound up key"</string>
+
+	<!-- Name for the sound down key preference -->
+	<string name="pref_sounddown_title">"Sound down key"</string>
+	<!-- Summary for the sound down key preference -->
+	<string name="pref_sounddown_summary">"Select how to use sound down key"</string>
+
 	<!-- Name for the camera shortcut usage preference -->
 	<string name="pref_camera_title">"Camera shortcut"</string>
 	<!-- Summary for the camera shortcut usage preference -->
@@ -223,6 +233,20 @@
 	<string name="list_keymode_hardware">"Use hardware keys"</string>
 	<!-- Preference selection to indicate never to use special shortcut keys. -->
 	<string name="list_keymode_none">"Disable"</string>
+
+	<!-- Preference selection to increase font size on sound up -->
+	<string name="list_soundup_font">"Increase font size"</string>
+	<!-- Preference selection to send ctrl key -->
+	<string name="list_soundup_ctrl">"Send ctrl key"</string>
+	<!-- Preference selection to send esc key -->
+	<string name="list_soundup_esc">"Send esc key"</string>
+
+	<!-- Preference selection to decrease font size on sound down -->
+	<string name="list_sounddown_font">"Decrease font size"</string>
+	<!-- Preference selection to send ctrl key -->
+	<string name="list_sounddown_ctrl">"Send ctrl key"</string>
+	<!-- Preference selection to send esc key -->
+	<string name="list_sounddown_esc">"Send esc key"</string>
 
 	<!-- Preference to not use pubkeys to authenticate to this host. -->
 	<string name="list_pubkeyids_none">"Do not use keys"</string>

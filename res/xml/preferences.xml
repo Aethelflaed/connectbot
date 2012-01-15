@@ -94,6 +94,24 @@
 			/>
 
 		<ListPreference
+			android:key="soundup"
+			android:title="@string/pref_soundup_title"
+			android:summary="@string/pref_soundup_summary"
+			android:entries="@array/list_soundup"
+			android:entryValues="@array/list_soundup_values"
+			android:defaultValue="Increase font size"
+			/>
+
+		<ListPreference
+			android:key="sounddown"
+			android:title="@string/pref_sounddown_title"
+			android:summary="@string/pref_sounddown_summary"
+			android:entries="@array/list_sounddown"
+			android:entryValues="@array/list_sounddown_values"
+			android:defaultValue="Decrease font size"
+			/>
+
+		<ListPreference
 			android:key="camera"
 			android:title="@string/pref_camera_title"
 			android:summary="@string/pref_camera_summary"

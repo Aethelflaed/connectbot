@@ -97,6 +97,30 @@
 		<item>none</item>
 	</string-array>
 
+	<string-array name="list_soundup" translatable="false">
+		<item>@string/list_soundup_font</item>
+		<item>@string/list_soundup_ctrl</item>
+		<item>@string/list_soundup_esc</item>
+	</string-array>
+
+	<string-array name="list_soundup_values" translatable="false">
+		<item>Increase font size</item>
+		<item>Send ctrl key</item>
+		<item>Send esc key</item>
+	</string-array>
+
+	<string-array name="list_sounddown" translatable="false">
+		<item>@string/list_sounddown_font</item>
+		<item>@string/list_sounddown_ctrl</item>
+		<item>@string/list_sounddown_esc</item>
+	</string-array>
+
+	<string-array name="list_sounddown_values" translatable="false">
+		<item>Decrease font size</item>
+		<item>Send ctrl key</item>
+		<item>Send esc key</item>
+	</string-array>
+
 	<string-array name="list_pubkeyids" translatable="false">
 		<item>@string/list_pubkeyids_none</item>
 		<item>@string/list_pubkeyids_any</item>

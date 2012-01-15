@@ -72,6 +72,9 @@ public class TerminalKeyListener implements OnKeyListener, OnSharedPreferenceCha
 	private String keymode = null;
 	private boolean hardKeyboard = false;
 
+	private String soundup = null;
+	private String sounddown = null;
+
 	private int metaState = 0;
 
 	private int mDeadKey = 0;
@@ -104,6 +107,8 @@ public class TerminalKeyListener implements OnKeyListener, OnSharedPreferenceCha
 				== Configuration.KEYBOARD_QWERTY);
 
 		updateKeymode();
+		updateSoundUpMode();
+		updateSoundDownMode();
 	}
 
 	/**
@@ -158,12 +163,26 @@ public class TerminalKeyListener implements OnKeyListener, OnSharedPreferenceCha
 				return false;
 			}
 
-			// check for terminal resizing keys
+			// Check for volume keys
 			if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
-				bridge.increaseFontSize();
+				Log.d("---Add---", "Volume up. " + soundup);
+				if (PreferenceConstants.SOUNDUP_CTRL.equals(soundup)) {
+					metaPress(META_CTRL_ON);
+				} else if (PreferenceConstants.SOUNDUP_ESC.equals(soundup)) {
+					Log.d("---Add---", "Send escape");
+					sendEscape();
+				} else
+					bridge.increaseFontSize();
 				return true;
 			} else if(keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
-				bridge.decreaseFontSize();
+				Log.d("---Add---", "Volume down . " + sounddown);
+				if (PreferenceConstants.SOUNDDOWN_CTRL.equals(sounddown)) {
+					metaPress(META_CTRL_ON);
+				} else if (PreferenceConstants.SOUNDDOWN_ESC.equals(sounddown)) {
+					Log.d("---Add---", "Send escape");
+					sendEscape();
+				} else
+					bridge.decreaseFontSize();
 				return true;
 			}
 
@@ -541,6 +560,14 @@ public class TerminalKeyListener implements OnKeyListener, OnSharedPreferenceCha
 		this.keymode = keymode;
 	}
 
+	public void setTerminalSoundUpMode(String soundup) {
+		this.soundup = soundup;
+	}
+
+	public void setTerminalSoundDownMode(String sounddown) {
+		this.sounddown = sounddown;
+	}
+
 	private int getStateForBuffer() {
 		int bufferState = 0;
 
@@ -575,6 +602,14 @@ public class TerminalKeyListener implements OnKeyListener, OnSharedPreferenceCha
 
 	private void updateKeymode() {
 		keymode = prefs.getString(PreferenceConstants.KEYMODE, PreferenceConstants.KEYMODE_RIGHT);
+	}
+
+	private void updateSoundUpMode() {
+		soundup = prefs.getString(PreferenceConstants.SOUNDUP, PreferenceConstants.SOUNDUP_FONT);
+	}
+
+	private void updateSoundDownMode() {
+		sounddown = prefs.getString(PreferenceConstants.SOUNDDOWN, PreferenceConstants.SOUNDDOWN_FONT);
 	}
 
 	public void setCharset(String encoding) {
