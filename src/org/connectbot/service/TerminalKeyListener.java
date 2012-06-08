@@ -154,7 +154,9 @@ public class TerminalKeyListener implements OnKeyListener, OnSharedPreferenceCha
 						return true;
 					}
 				} else if (PreferenceConstants.KEYMODE_HARDWARE.equals(keymode)) {
-					if (keyCode == KeyEvent.KEYCODE_TAB) {
+					if (keyCode == KeyEvent.KEYCODE_TAB
+							&& (metaState & META_TAB) != 0) {
+						metaState &= ~(META_TAB | META_TRANSIENT);
 						bridge.transport.write(0x09);
 						return true;
 					}
@@ -345,9 +347,6 @@ public class TerminalKeyListener implements OnKeyListener, OnSharedPreferenceCha
 			switch(keyCode) {
 			case KEYCODE_ESCAPE:
 				sendEscape();
-				return true;
-			case KeyEvent.KEYCODE_TAB:
-				bridge.transport.write(0x09);
 				return true;
 			case KeyEvent.KEYCODE_CAMERA:
 
